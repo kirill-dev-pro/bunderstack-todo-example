@@ -1,0 +1,9 @@
+node_modules
+dist
+.output
+.tanstack
+.git
+.env
+data.db
+uploads
+README.md

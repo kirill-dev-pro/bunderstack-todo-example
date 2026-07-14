@@ -25,7 +25,7 @@ export const app = createBunderstack({
   // Username-only auth: the anonymous plugin creates a real session
   // without passwords or signup. See routes/index.tsx for the client side.
   auth: {
-    baseURL: process.env.APP_URL ?? 'http://localhost:3005',
+    baseURL: process.env.APP_URL ?? 'http://localhost:3000',
     secret: process.env.AUTH_SECRET ?? 'dev-secret-change-before-production',
     plugins: [anonymous()],
     advanced: {
@@ -50,6 +50,7 @@ export const app = createBunderstack({
   // Email: 'console' provider by default in dev (logs to stdout).
   // Set SMTP_URL in .env for real delivery.
   email: {
+    provider: 'console',
     from: 'todo@example.com',
   },
 

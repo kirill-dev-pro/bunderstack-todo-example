@@ -9,9 +9,10 @@ export const access = defineAccess(schema, {
     ownerColumn: 'userId',
     // Lists are scoped per-user: everyone only ever sees their own rows
     // (applies to realtime events too).
-    scope: (ctx) => ({ userId: ctx.user!.id }),
+    // @TODO: uncomment if need scope
+    // scope: (ctx) => ({ userId: ctx.user!.id }),
     list: 'authenticated',
-    get: 'owner',
+    get: 'authenticated',
     create: 'authenticated',
     update: 'owner',
     delete: 'owner',

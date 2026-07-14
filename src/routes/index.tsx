@@ -69,15 +69,9 @@ function TodoApp({ appName, userName }: { appName: string; userName: string }) {
   // Auto-CRUD: list/create/update/delete. Todo queries auto-invalidate;
   // the extra onSuccess keeps the tRPC stats bar in sync too.
   const todos = useQuery(api.todos.listQuery({ limit: 100 }))
-  const createTodo = useMutation(
-    api.todos.createMutation({ onSuccess: invalidateStats }),
-  )
-  const toggleTodo = useMutation(
-    api.todos.updateMutation({ onSuccess: invalidateStats }),
-  )
-  const deleteTodo = useMutation(
-    api.todos.deleteMutation({ onSuccess: invalidateStats }),
-  )
+  const createTodo = useMutation(api.todos.createMutation({ onSuccess: invalidateStats }))
+  const toggleTodo = useMutation(api.todos.updateMutation({ onSuccess: invalidateStats }))
+  const deleteTodo = useMutation(api.todos.deleteMutation({ onSuccess: invalidateStats }))
 
   // tRPC: complete = update DB + send notification email in one call
   const completeTodo = useMutation({
@@ -158,17 +152,11 @@ function TodoApp({ appName, userName }: { appName: string; userName: string }) {
             <input
               type="checkbox"
               checked={todo.done}
-              onChange={() =>
-                toggleTodo.mutate({ id: todo.id, data: { done: !todo.done } })
-              }
+              onChange={() => toggleTodo.mutate({ id: todo.id, data: { done: !todo.done } })}
             />
             {/* Storage transforms: sharp resizes on the fly via ?w=&format= */}
             {todo.imageFileId && (
-              <a
-                href={api.files.images.url(todo.imageFileId)}
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href={api.files.images.url(todo.imageFileId)} target="_blank" rel="noreferrer">
                 <img
                   src={api.files.images.url(todo.imageFileId, {
                     w: 80,
@@ -178,9 +166,7 @@ function TodoApp({ appName, userName }: { appName: string; userName: string }) {
                 />
               </a>
             )}
-            <span className={todo.done ? 'title title--done' : 'title'}>
-              {todo.title}
-            </span>
+            <span className={todo.done ? 'title title--done' : 'title'}>{todo.title}</span>
             {!todo.done && (
               <button
                 className="complete"
