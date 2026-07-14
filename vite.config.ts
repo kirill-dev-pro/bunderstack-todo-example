@@ -7,7 +7,8 @@ export default defineConfig({
     tsconfigPaths: true,
   },
   plugins: [tanstackStart(), react()],
+
   preview: {
-    allowedHosts: [process.env.APP_URL ?? 'localhost'],
+    allowedHosts: [process.env.APP_HOST ?? 'localhost'],
   },
 })
