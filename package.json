@@ -4,7 +4,10 @@
   "type": "module",
   "scripts": {
     "dev": "bun --bun vite dev --port 3005",
-    "build": "vite build"
+    "build": "vite build",
+    "fmt": "oxfmt --fix",
+    "lint": "oxlint",
+    "fix": "oxlint --fix && oxfmt"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.101.1",
@@ -12,7 +15,7 @@
     "@tanstack/react-router-ssr-query": "^1.167.1",
     "@tanstack/react-start": "^1.168.26",
     "better-auth": "^1.0.0",
-    "bunderstack": "^0.1.0",
+    "bunderstack": "^0.2.0",
     "bunderstack-query": "^0.1.0",
     "bunderstack-start": "^0.1.0",
     "drizzle-kit": "^0.31.10",

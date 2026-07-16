@@ -4,3 +4,5 @@ dist
 data.db
 uploads
 .env
+
+.DS_store
