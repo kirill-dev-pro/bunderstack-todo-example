@@ -53,6 +53,7 @@ export const app = await createBunderstack({
   // Email: 'console' provider by default in dev (logs to stdout).
   // Set SMTP_URL in .env for real delivery.
   email: {
+    provider: 'console',
     from: 'todo@example.com',
   },
 
