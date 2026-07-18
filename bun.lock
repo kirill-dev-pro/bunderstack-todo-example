@@ -10,7 +10,7 @@
         "@tanstack/react-router-ssr-query": "^1.167.1",
         "@tanstack/react-start": "^1.168.26",
         "better-auth": "^1.0.0",
-        "bunderstack": "^0.2.0",
+        "bunderstack": "^0.4.0",
         "bunderstack-query": "^0.1.0",
         "bunderstack-start": "^0.1.0",
         "drizzle-kit": "^0.31.10",
@@ -401,7 +401,7 @@
 
     "buffer-from": ["buffer-from@1.1.2", "", {}, "sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ=="],
 
-    "bunderstack": ["bunderstack@0.2.0", "", { "dependencies": { "@trpc/server": "^11.0.0", "better-auth": "^1.0.0", "hono": "^4.0.0", "superjson": "^2.2.0", "zod": "^4.4.3" }, "peerDependencies": { "@electric-sql/pglite": ">=0.3.0", "@libsql/client": ">=0.14.0", "drizzle-kit": "^0.30.0", "drizzle-orm": "^0.45.0", "nodemailer": "^6", "postgres": ">=3.4.0", "typescript": "^5" }, "optionalPeers": ["@electric-sql/pglite", "@libsql/client", "drizzle-kit", "nodemailer", "postgres"] }, "sha512-8wcPb51inY70Eb4Qv+90/B/LfWP7cZDpFhOflpJNfV1xbaCqk6d1EXZBWJLj/o4sb+rMq4kfpmzsE5SQO42F3A=="],
+    "bunderstack": ["bunderstack@0.4.0", "", { "dependencies": { "@trpc/server": "^11.0.0", "better-auth": "^1.0.0", "hono": "^4.0.0", "superjson": "^2.2.0", "zod": "^4.4.3" }, "peerDependencies": { "@electric-sql/pglite": ">=0.3.0", "@libsql/client": ">=0.14.0", "drizzle-kit": "^0.30.0", "drizzle-orm": "^0.45.0", "nodemailer": "^6", "postgres": ">=3.4.0", "typescript": "^5" }, "optionalPeers": ["@electric-sql/pglite", "@libsql/client", "drizzle-kit", "nodemailer", "postgres"] }, "sha512-fU6gSy7C1ULD/K/qJXAfhaf/3MuyZNxlPjYAJ3TBg+pnSCMqP7vNKMv3qYnIaf4i6G62J+15BlMafVSDAozTug=="],
 
     "bunderstack-query": ["bunderstack-query@0.1.0", "", { "dependencies": { "@trpc/client": "^11.0.0", "@trpc/server": "^11.0.0", "@trpc/tanstack-react-query": "^11.0.0", "bunderstack": "0.1.0", "superjson": "^2.2.0" }, "peerDependencies": { "@tanstack/react-query": "^5.101.0", "typescript": "^5" } }, "sha512-REOLhAE/sWprmd1xQEKiV2Kng1MAPt9/y+IFHKqXhSVGavqEYrvoL1p6mRnk1b1LrvsKdqPf7NTXmCSj5ORRpQ=="],
 
