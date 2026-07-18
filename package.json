@@ -15,7 +15,7 @@
     "@tanstack/react-router-ssr-query": "^1.167.1",
     "@tanstack/react-start": "^1.168.26",
     "better-auth": "^1.0.0",
-    "bunderstack": "^0.4.0",
+    "bunderstack": "^0.5.0",
     "bunderstack-query": "^0.1.0",
     "bunderstack-start": "^0.1.0",
     "drizzle-kit": "^0.31.10",
@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@tanstack/react-router-devtools": "^1.167.0",
+    "@types/bun": "^1.3.14",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",

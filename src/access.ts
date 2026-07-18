@@ -21,7 +21,10 @@ export const access = defineAccess(schema, {
   // toggle, and delete. No owner column — `crud: true` opts the table into
   // CRUD explicitly. Board pages list with `?boardId=` (filterable below).
   todos: {
-    scope: ({ user }) => (user ? { boardId: 'any' } : null),
+    scope: {
+      read: () => ({}),
+      write: () => ({}),
+    },
     crud: true,
     list: 'authenticated',
     get: 'authenticated',
