@@ -97,6 +97,8 @@ export const app = await createBunderstack({
             .insert(schema.boards)
             .values({ name: input.name, ownerId: asTypeId('user', ctx.user.id) })
             .returning()
+            
+          await ctx.realtime.publish(schema.boards, 'create', board!)
           return board!
         }),
 
@@ -130,10 +132,13 @@ export const app = await createBunderstack({
 
           if (!todo) throw new Error('Todo not found')
 
-          await ctx.db
+          const [updatedTodo] = await ctx.db
             .update(schema.todos)
             .set({ done: true, completedAt: new Date() })
             .where(eq(schema.todos.id, asTypeId('todo', input.id)))
+            .returning()
+            
+          await ctx.realtime.publish(schema.todos, 'update', updatedTodo!)
 
           if (ctx.env.NOTIFY_COMPLETED) {
             await ctx.email.send({
